@@ -17,7 +17,7 @@
             <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
             <p>{{ post.text|linebreaksbr }}</p>
             {% if post.image %}
-            <img src= {{ post.image.url }} width="200" height="200">
+            <img src= {{ post.image.url }} width="200" height="200" object-fit: cover;>
             {% endif %}
         </article>
     {% endfor %}
