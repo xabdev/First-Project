@@ -83,3 +83,9 @@ img {
     height: 300px;
     object-fit: contain;
 }
+
+.imgdetail {
+    width: 600px;
+    height: 400px;
+    
+}
