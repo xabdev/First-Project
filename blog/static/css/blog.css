@@ -15,6 +15,11 @@ h1 a, h2 a {
     padding: 20px 20px 20px 40px;
 }
 
+.page-footer {
+    bottom: 0;
+    position: fixed;
+}
+
 .page-header h1,
 .page-header h1 a,
 .page-header h1 a:visited,
