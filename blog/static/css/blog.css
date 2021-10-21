@@ -1,10 +1,11 @@
+body {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
 h1 a, h2 a {
 	color: #C25100;
 	font-family: 'Lato';
-}
-
-body {
-    padding-left: 15px;
 }
 
 .page-header {
@@ -32,6 +33,7 @@ h4 {
 
 .date {
     color: #828282;
+
 }
 
 .save {
@@ -63,7 +65,7 @@ h4 {
 
 .post > .date,
 .post > .actions {
-    float: right;
+    float: left;
 }
 
 .btn-default,
@@ -82,11 +84,10 @@ img {
     width: 400px;
     height: 300px;
     object-fit: contain;
+    display: block;
 }
 
 .imgdetail {
-    width: 600px;
-    height: 400px;
-    vertical-align: left;
-    
+    width: 400px;
+    height: 300px;
 }

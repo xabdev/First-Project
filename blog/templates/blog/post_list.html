@@ -4,21 +4,23 @@
 
     {% for post in posts %}
         <article class="post">
-            <time class="date">
-                {{ post.published_date }}
-            </time>
-            {% if user.is_authenticated %}
-                <aside class="actions">
-                    <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}">
-                        {% include './icons/pencil-fill.svg' %}
-                    </a>
-                </aside>
-            {% endif %}
-            <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
-            <p>{{ post.text|linebreaksbr }}</p>
+            <div class="d-flex justify-content-start align-items-center">
+                <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+                {% if user.is_authenticated %}
+                    <aside class="actions m-3">
+                        <a class="btn btn-sm btn-default" href="{% url 'post_edit' pk=post.pk %}">
+                            {% include './icons/pencil-fill.svg' %}
+                        </a>
+                    </aside>
+                {% endif %}
+            </div>
+            <p class="mt-3">{{ post.text|linebreaksbr }}</p>
             {% if post.image %}
             <img src= {{ post.image.url }}>
             {% endif %}
+            <time class="date">
+                {{ post.published_date }}
+            </time>
         </article>
     {% endfor %}
     
