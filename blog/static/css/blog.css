@@ -87,5 +87,6 @@ img {
 .imgdetail {
     width: 600px;
     height: 400px;
+    vertical-align: left;
     
 }
