@@ -1,0 +1,15 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+<h3>Consulta!</h3>
+<hr>
+
+<form action="" method="post" class="post-form" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form}}
+    <input type="submit">
+
+</form>
+
+{% endblock %}

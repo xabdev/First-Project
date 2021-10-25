@@ -1,8 +1,9 @@
 from django.shortcuts import render, get_object_or_404
 from django.utils import timezone
 from .models import Post
-from .forms import PostForm
+from .forms import PostForm, ConsultaForm
 from django.shortcuts import redirect
+from . import forms
 
 # Create your views here.
 
@@ -13,7 +14,6 @@ def post_list(request):
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     return render(request, 'blog/post_detail.html', {'post': post})
-
 
 
 def post_new(request):
@@ -51,6 +51,19 @@ def post_delete(request, pk):
 
 def contacto(request):
     return render(request, 'blog/contacto.html')
+
+def consulta(request):
+    
+    form = ConsultaForm()
+    
+    if request.method == 'POST':
+        form = ConsultaForm(request.POST)
+        if form.is_valid():
+            form.save()
+
+    context = {'form':form}
+    return render(request, 'blog/consulta.html', context)
+
 
 
 

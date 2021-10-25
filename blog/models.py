@@ -19,6 +19,17 @@ class Post(models.Model):
         return self.title
 
 
+class Consulta(models.Model):
+    
+    first_name = models.CharField(max_length=200)
+    last_name = models.CharField(max_length=200)
+    text = models.TextField()
+    fecha = models.DateTimeField(default=timezone.now)
+    
+    def __str__ (self):
+        return self.first_name
+
+
 
 
     
