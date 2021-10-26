@@ -1,7 +1,6 @@
-/* body {
+body {
     padding-left: 100px;
-    padding-right: 100px;
-} */
+}
 
 a {
     color: #ffffff;
@@ -160,3 +159,10 @@ input {
 textarea {
     color: #161616;
 }
+
+
+/* .container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: 150px;
+} */
