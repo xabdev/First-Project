@@ -15,44 +15,41 @@
 </head>
 
 <body>
-    <nav class="page-header">
-        <div class="container-fluid">
-          <div class="navbar-header navbar-left">
-            <h1><a href="/">SERVICIO TECNICO REBOOT</a>
-                {% if user.is_authenticated %}
-                <a href="{% url 'post_new' %}" class="top-menu mx-3">
-                    {% include './icons/file-earmark-plus.svg' %}
-                </a>
-                {% endif %}
-            </h1>
-            
-          </div>
-          <ul class="nav navbar-nav navbar-right">
-            <li ><a href="/consulta" class="py-3 px-5"><span class="glyphicon glyphicon-pencil"></span> Envianos tu consulta!</a></li>
-            <li><a href="/contacto" class="py-3 px-5"><span class="glyphicon glyphicon-phone-alt"></span> Contacto</a></li>
-        </ul>
-        </div>
-      </nav>
-    <!-- <header class="page-header">
+
+      <nav class="page-header">
         <div class="container">
+            <div class="navbar-header navbar-left">
+            <h1><a href="/">SERVICIO TECNICO REBOOT</a>
             {% if user.is_authenticated %}
-                <a href="{% url 'post_new' %}" class="top-menu">
-                    {% include './icons/file-earmark-plus.svg' %}
-                </a>
+            <a href="{% url 'post_new' %}" class="top-menu mx-3">
+                {% include './icons/file-earmark-plus.svg' %}
+            </a>
             {% endif %}
-            <h1><a href="/">diabolikaL</a></h1>
+            </h1>
         </div>
-    </header> -->
+    
+    <ul class="nav navbar-nav">
+        <li ><a href="/consulta" class="py-3 px-5"><span class="glyphicon glyphicon-pencil"></span> Envianos tu consulta!</a></li>
+        <li><a href="/contacto" class="py-3 px-5"><span class="glyphicon glyphicon-phone-alt"></span> Contacto</a></li>
+    </ul>
+    </div>
+    </nav>
+    
+
+
     <main class="container">
-            <div class="col-6">
+            <div class="col-7">
                 {% block content %}
                 {% endblock %}
             </div>
     </main>
-    <footer class="page-footer">
-        <p class="text-center">Author: Jav
-        <a href="mailto:xab@gmail.com">xab@gmail.com</a></p>
-    </footer>
+
+<footer class="page-footer font-small blue">
+    <div class="footer-copyright text-center py-3">Author:
+      <a href="mailto:xab.dev@gmail.com"> Javier Salcedo</a>
+    </div>
+</footer>
+
 </body>
 
 </html>
