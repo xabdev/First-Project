@@ -52,6 +52,7 @@ def post_delete(request, pk):
 def contacto(request):
     return render(request, 'blog/contacto.html')
 
+
 def consulta(request):
     
     form = ConsultaForm()
@@ -60,6 +61,7 @@ def consulta(request):
         form = ConsultaForm(request.POST)
         if form.is_valid():
             form.save()
+            return redirect('post_list')
 
     context = {'form':form}
     return render(request, 'blog/consulta.html', context)
